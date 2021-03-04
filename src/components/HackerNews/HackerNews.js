@@ -13,11 +13,11 @@ class HackerNews extends Component {
   }
 
   render() {
-    const articles = this.state.articles.map((article => <Card key={article.id} article={article} />))
+    const articles = this.props.articles.map((article => <Card key={article.id} article={article} />))
     return (
       <div className='news-container'>
         <img style={styles.logo} src="./hackerNews.jpeg" alt="" />
-        {this.state.loading ? <Loading /> : <div>{articles}</div>}
+        {this.props.loading ? <Loading /> : <div>{articles}</div>}
       </div>
     )
   }
