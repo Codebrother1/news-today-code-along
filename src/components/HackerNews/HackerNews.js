@@ -12,6 +12,10 @@ class HackerNews extends Component {
     this.state = { articles: [], loading: true }
   }
 
+  componentDidMount(){
+    this.props.requestArticles();
+  }
+
   render() {
     const articles = this.props.articles.map((article => <Card key={article.id} article={article} />))
     return (

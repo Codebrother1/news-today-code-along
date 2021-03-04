@@ -11,7 +11,7 @@ const REQUEST_ARTICLES = "REQUEST_ARTICLES"
 
 
 export function requestArticles(){
-  let articles = axios.get('/api/hacker-news')
+  let articles = axios.get('/api/hacker-news').then(res => res.data)
   return{
     type: REQUEST_ARTICLES,
     payload: articles
