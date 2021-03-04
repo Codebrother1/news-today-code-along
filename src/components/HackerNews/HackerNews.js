@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Card from './../shared/Card/Card';
 import Loading from './../shared/Loading/Loading';
+import {connect} from 'react-redux';
+import {requestArticles} from './../../redux/hackerNewsReducer'
+
+
 
 class HackerNews extends Component {
   constructor(props) {
@@ -19,7 +23,13 @@ class HackerNews extends Component {
   }
 }
 
-export default HackerNews;
+const mapStateToProps = state => state
+
+
+
+export default connect(mapStateToProps, {requestArticles})(HackerNews);
+
+
 
 
 const styles = {
