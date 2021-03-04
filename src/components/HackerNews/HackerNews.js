@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './../shared/Card/Card';
 import Loading from './../shared/Loading/Loading';
 import {connect} from 'react-redux';
-import {requestArticles} from './../../redux/hackerNewsReducer'
+import {requestArticles} from '../../redux/hackerNewsReducer'
 
 
 
